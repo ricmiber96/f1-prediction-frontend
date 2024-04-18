@@ -5,7 +5,7 @@ export default function Layout ({ children }) {
   return (
     <>
         <Header/>
-        <main className='flex flex-col w-full h-screen '>
+        <main className='flex flex-col container h-screen '>
         <Outlet />
         </main>
     </>

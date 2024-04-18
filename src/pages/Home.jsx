@@ -10,7 +10,7 @@ export default function Home (props) {
                 Drivers Mode
             </Link>
         </Button>
-      <Button className='text-lg'>Teams Mode</Button>
+      <Button className='text-lg cursor-no-drop'>Teams Mode</Button>
     </div>
   )
 }
