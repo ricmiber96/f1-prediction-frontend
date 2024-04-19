@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom'
 
 export default function SignUpForm (props) {
   return (
-    <div className="h-full bg-gray-400 dark:bg-gray-900">
+    <div className="h-full bg-gray-500 dark:bg-gray-900">
       <div className="mx-auto">
       <div className="flex justify-center px-6 py-8">
-        <div className="w-full xl:w-3/4 lg:w-11/12 flex">
+        <div className="w-full xl:w-3/4 lg:w-11/12 flex shadow-lg">
           <div className="w-full bg-gray-400 dark:bg-gray-800 hidden lg:block lg:w-5/12 bg-cover rounded-l-lg" style={{
             backgroundImage: `url(${singUpImage})`,
             backgroundSize: 'cover', // Ajusta el tamaño para cubrir completamente
@@ -36,24 +36,24 @@ export default function SignUpForm (props) {
                 <input
                   className="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 dark:text-white border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
                   id="username"
-                  type="text"
-                  placeholder="Username"/>
+                  type="email"
+                  placeholder="Email"/>
                 </div>
                 <div className='text-start content-start'>
                 <label className="block mb-2 text-sm font-bold text-gray-700 dark:text-white" htmlFor="username">Password</label>
                 <input
                   className="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 dark:text-white border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
                   id="username"
-                  type="text"
-                  placeholder="Username"/>
+                  type="password"
+                  placeholder="Password"/>
                 </div>
                 <div className='text-start content-start'>
                 <label className="block mb-2 text-sm font-bold text-gray-700 dark:text-white" htmlFor="username">Confirm Password</label>
                 <input
                   className="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 dark:text-white border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
                   id="username"
-                  type="text"
-                  placeholder="Username"/>
+                  type="password"
+                  placeholder="Confirm Password"/>
                 </div>
               </div>
               <div className="mb-6 text-center mt-8">
@@ -64,9 +64,11 @@ export default function SignUpForm (props) {
                   </button>
               </div>
               <hr className="mb-6 border-t" />
+
               <div className="text-center">
-                <Link to={'/login'} className="inline-block text-sm text-red-500 dark:text-red-500 align-baseline hover:text-red-800">
-                  Already have an account? Login!
+              Already have an account?
+                <Link to={'/login'} className="ml-1 text-red-500 dark:text-red-500 align-baseline hover:text-red-800">
+                   Login!
                 </Link>
               </div>
             </form>
