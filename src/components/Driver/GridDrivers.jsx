@@ -7,7 +7,7 @@ import { Button } from '../ui/button'
 
 export default function GridDrivers (props) {
   const [driverList, setDriverList] = useState(drivers)
-
+  const [prediction, setPrediction] = useState([])
   const handleDragEnd = (event) => {
     const { active, over } = event
     if (active.id !== over.id) {
@@ -17,15 +17,17 @@ export default function GridDrivers (props) {
         const newPeople = [...people]
         newPeople.splice(oldIndex, 1)
         newPeople.splice(newIndex, 0, people[oldIndex])
+        const newPrediction = newPeople.map((driver) => driver.id)
+        setPrediction(newPrediction)
         return newPeople
       })
     }
+    console.log('driver', typeof driverList)
   }
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log('driver', driverList)
-    localStorage.setItem('drivers', JSON.stringify(driverList))
+    console.log('driver', prediction)
   }
 
   return (

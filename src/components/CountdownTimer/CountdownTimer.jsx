@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom'
 import CheckeredFlagIcon from '../Icons/CheckeredFlagIcon'
 import { Button } from '../ui/button'
 
-export default function CountdownTimer ({ id }) {
-  const futureDate = new Date('2024-04-17')
+export default function CountdownTimer ({ id, startDate }) {
+  const futureDate = new Date(startDate)
   const [months, remainingDays, remainingHours, remainingMinutes, remainingSeconds] = useCountdown(futureDate)
 
   if ((months < 1 && (remainingDays <= 7 && remainingDays >= 0))) {

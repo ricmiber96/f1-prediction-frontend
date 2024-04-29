@@ -36,7 +36,7 @@ export default function RacesCard ({ race }) {
         <div className='w-full flex flex-col items-center justify-end content-end'>
         <img className='p-4 rounded-md w-[180px]' src={race.imgCircuit}/>
         <div className='items-end'>
-        <CountdownTimer id={race.id}/>
+        <CountdownTimer id={race.id} startDate={race.startDate}/>
         </div>
         </div>
         </div>
